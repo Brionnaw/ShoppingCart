@@ -34,7 +34,25 @@ let shoe3 = <HTMLElement>document.getElementById('output3')
   let item1 = <HTMLElement>document.getElementById('items')
   item1.innerHTML = `${nike.shoeName} -$${nike.price}`;
   shoppingCart.push(nike.price)
-  console.log(shoppingCart)
+ }
+
+ function addAddidas (){
+  let item2 = <HTMLElement>document.getElementById('item2')
+  item2.innerHTML = `${addidas.shoeName} -$${addidas.price}`;
+  shoppingCart.push(addidas.price)
+ }
+ function addJordans (){
+  let item3 = <HTMLElement>document.getElementById('item3')
+  item3.innerHTML = `${jordans.shoeName} -$${jordans.price}`;
+  shoppingCart.push(jordans.price)
+}
+let counter = 0;
+ function checkOut () {
+   for (let price of shoppingCart) {
+     counter =  counter + price;  // on loop one counter = 89.99
+    let checkOutPrice = <HTMLElement>document.getElementById('checkOutPrice')
+    checkOutPrice.innerHTML = `${counter}`;
+   }
  }
 
 // add cart section
