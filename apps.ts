@@ -5,6 +5,8 @@ class Shoes {
 
     }
 }
+let shoppingCart = []
+
 let nike = new Shoes ()
 nike.shoeName = 'airmax'
 nike.price = 89.99
@@ -17,10 +19,6 @@ let jordans = new Shoes ()
 jordans.shoeName = '12s'
 jordans.price = 159.99
 
-function itClicks(){
-  console.log('itClicks')
-}
-
 
 
 let shoe1 = <HTMLElement>document.getElementById('output')
@@ -32,6 +30,11 @@ let shoe1 = <HTMLElement>document.getElementById('output')
 let shoe3 = <HTMLElement>document.getElementById('output3')
    shoe3.innerHTML = `${jordans.shoeName} -$${jordans.price}`;
 
+ function addToCart (){
+  let item1 = <HTMLElement>document.getElementById('items')
+  item1.innerHTML = `${nike.shoeName} -$${nike.price}`;
+  shoppingCart.push(nike.price)
+  console.log(shoppingCart)
+ }
 
-// add onclick
 // add cart section
